@@ -1,0 +1,31 @@
+body {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 60px;
+}
+
+.list-group-item>li {
+  list-style-type: none;
+  border-bottom: 1px solid lightgrey;
+  padding: 10px 30px 20px 30px;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li .image-wrap {
+  text-align: center;
+  margin-top: 30px;
+}
+
+li .nav-pills {
+  margin-top: 30px;
+}
