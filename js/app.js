@@ -17,6 +17,23 @@
           full: 'fakeimg-1.png',
           thumb: 'fakeimg-0.png'
         }
+      ],
+      reviews: [
+        {
+          stars: 5,
+          body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          author: "test@test.com"
+        },
+        {
+          stars: 2,
+          body: "Nulla arcu tortor, blandit sed fermentum eget, lacinia non nisi.",
+          author: "foo@test.com"
+        },
+        {
+          stars: 3,
+          body: "Curabitur enim nisi, consequat a justo id, condimentum congue arcu.",
+          author: "bar@test.com"
+        }
       ]
     },
     {
@@ -33,6 +50,23 @@
         {
           full: 'fakeimg-1.png',
           thumb: 'fakeimg-0.png'
+        }
+      ],
+      reviews: [
+        {
+          stars: 5,
+          body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          author: "test@test.com"
+        },
+        {
+          stars: 2,
+          body: "Nulla arcu tortor, blandit sed fermentum eget, lacinia non nisi.",
+          author: "foo@test.com"
+        },
+        {
+          stars: 3,
+          body: "Curabitur enim nisi, consequat a justo id, condimentum congue arcu.",
+          author: "bar@test.com"
         }
       ]
     },
@@ -51,6 +85,23 @@
           full: 'fakeimg-1.png',
           thumb: 'fakeimg-0.png'
         }
+      ],
+      reviews: [
+        {
+          stars: 5,
+          body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          author: "test@test.com"
+        },
+        {
+          stars: 2,
+          body: "Nulla arcu tortor, blandit sed fermentum eget, lacinia non nisi.",
+          author: "foo@test.com"
+        },
+        {
+          stars: 3,
+          body: "Curabitur enim nisi, consequat a justo id, condimentum congue arcu.",
+          author: "bar@test.com"
+        }
       ]
     }
   ];
@@ -68,6 +119,15 @@
 
     this.isSelected = function(checkTab) {
       return this.tab === checkTab;
+    };
+  });
+
+  app.controller('ReviewController', function() {
+    this.review = {};
+
+    this.addReview = function(product) {
+      product.reviews.push(this.review);
+      this.review = {};
     };
   });
 }) ();
