@@ -39,7 +39,7 @@
               <footer>by: {{review.author}}</footer>
             </blockquote>
             <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
-              <blockquote>
+              <blockquote ng-show="reviewCtrl.review.star || reviewCtrl.review.body || reviewCtrl.review.author">
                 <b>Stars: {{reviewCtrl.review.stars}}</b>
                 {{reviewCtrl.review.body}}
                 <footer>by: {{reviewCtrl.review.author}}</footer>
